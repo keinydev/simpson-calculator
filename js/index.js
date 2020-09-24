@@ -16,45 +16,6 @@ window.onload = function() {
     }
 };
 
-
-/*
-function simpson13(n, a, b, f){
-    //calculamos h
-    h = (b - a) / n
-    //Inicializamos nuestra varible donde se almacenara las sumas
-    suma = 0.0
-    //hacemos un ciclo para ir sumando las areas
-    for (var i = 1; i < n; i++) {
-        //calculamos la x
-        //x = a - h + (2 * h * i)
-        x = a + i * h
-        // si es par se multiplica por 4
-        if(i % 2 == 0)
-            suma = suma + 2 * fx(x, f);
-        //en caso contrario se multiplica por 2
-        else
-            suma = suma + 4 * fx(x, f);    
-
-
-
-    }
-         //sumamos los el primer elemento y el ultimo
-        suma = suma + fx(a, f) + fx(b, f);
-        //Multiplicamos por h/3
-        rest = suma * (h / 3);
-    //Retornamos el resultado
-    return (rest); 
-
-}
-
-function fx(x, f){
-    var retorno = eval('('+f+')');
-     return retorno;
-}
-
-*/
-
-
 /**
  * Esta función se encarga de validar los campos antes de ser procesados
  * @return {void}
@@ -195,11 +156,6 @@ function adecuarEcuacion()
                 }            
             }          
         }
-
-        /*
-        if(ecuacion.indexOf(expresion[i]) != -1){
-           ecuacion = ecuacion.slice(0, ecuacion.indexOf(expresion[i])) + "Math." + ecuacion.slice(ecuacion.indexOf(expresion[i]));
-        }*/
     } 
 
     return ecuacion;
@@ -223,7 +179,6 @@ function getIndicesOf(searchStr, str, caseSensitive) {
 }
 
 function formula(){
-    //var f = 'Math.sqrt(1+(x*x))';
     var f = 'Math.sqrt(1+(x*x))';
     return f;
 }
@@ -285,13 +240,6 @@ function formula(){
     var f = 'Math.sqrt(1+(x*x))';
     return f;
 }
-
-/*
-function fx(x){
-    var retorno = eval('('+formula()+')');
-    //var retorno = Math.sqrt(1+(x*x));
-     return retorno;
-}*/
 
 /**
  * Esta función ejecuta el método simpson 3/8
